@@ -56,6 +56,7 @@ public class ArrayDs {
 			object = scanner.next();
 			add(object);
 			System.out.println("Object inserted at:"+index);
+			
 		}
 		if(choice==2) {
 			if(type==1) {
@@ -93,16 +94,24 @@ public class ArrayDs {
 		}
 	}
 	public static void add(Object object) {
+		
 		if(index==-1) {
-			index++;
+			System.out.println("Inserting First Element:");
+			index=0;
 			object_array[index]=object;
 		}
 		else {
+			
+			if(index==index) {
+				System.out.println("Full");
+			}
+			else {
 			index++;
 			object_array[index]=object;
-			
+			}
 		}
-	}
+		
+		}
 	public static void traverse() {
 		if(choice==1) {
 			
@@ -152,7 +161,7 @@ public class ArrayDs {
 			choice();				
 			while(choice!=0) {
 				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse");
-				int choice=scanner.nextInt();
+			int choice=scanner.nextInt();
 			switch(choice) {
 			case 1 : check(); break;
 			case 2 : traverse();break;
