@@ -156,6 +156,7 @@ public class ArrayDs {
 			switch(choice) {
 			case 1 : check(); break;
 			case 2 : traverse();break;
+			default : System.out.println("Wrong Choice");
 			}
 	//		check();
 //			traverse();
