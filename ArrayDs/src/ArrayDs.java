@@ -51,179 +51,236 @@ public class ArrayDs {
 		}
 	}
 	public static void getValue() {
-	if(choice>0) {
-		if(choice==1&&index==size-1) {
-			System.out.println("Full for o");
-		}
-		if(choice==2&&index==sizee-1) {
-			System.out.println("Full for p");
-		}
-	}
-		if(true) {
 		System.out.println("Enter Element To Insert:");
-		}
 		if(choice==1) {
 			object_element = scanner.next();
 			add(object_element);
-			System.out.println("Object inserted at:"+index);
 			
 		}
 		if(choice==2) {
 			if(type==1) {
 				byte_element = scanner.nextByte();
 				add(byte_element);
-				System.out.println("Element Inserted At:"+index);
+				
 				
 			}
 			if(type==2) {
 				short_element = scanner.nextShort();
 				add(short_element);
-				System.out.println("Element Inserted At:"+index);
+				
 			}
 			if(type==3) {
 				int_element = scanner.nextInt();
 				add(int_element);
-				System.out.println("Element Inserted At:"+index);
+				
 			}
 			if(type==4) {
 				long_element= scanner.nextLong();
 				add(long_element);
-				System.out.println("Element Inserted At:"+index);
+				
 			}
 			if(type==5) {
 				float_element=scanner.nextFloat();
 				add(float_element);
-				System.out.println("Element Inseted At:"+index);
+				
 			}
 			if(type==6) {
 				double_element = scanner.nextDouble();
 				add(double_element);
-				System.out.println("Element Inserted At:"+index);
+				
 			}
 			if(type==7) {
 				char_element = scanner.next().charAt(0);
 				add(char_element);
-				System.out.println("Element Inserted At:"+index);
+				
 			}
 			if(type==8) {
 				boolean_element = scanner.nextBoolean();
 				add(boolean_element);
-				System.out.println("Element Inserted At:"+index);
+				
 			}
 		}
 	
 	}
+
 	public static void add(Object object_element) {
+			if(index==size-1) {
+				System.out.println("Full");
+			}
+			else {
+				if(index==-1) {
+					System.out.println("Inserting First Element:");
+					index=0;
+					object_array[index]=object_element;
+					System.out.println("Object inserted at:"+index);
+				}
+				else {
+					index++;
+					object_array[index]=object_element;	
+					System.out.println("Object inserted at:"+index);
+				}
+			}
+
+	}
+	
+	public static void add(byte byte_element) {
 		
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			object_array[index]=object_element;
+		if(index==sizee-1) {
+			System.out.println("Full");
 		}
+		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				byte_array[index]=byte_element;
+				System.out.println("Element Inserted At:"+index);
+			}
 			else {
 			index++;
-			object_array[index]=object_element;
-			}
-		
-		
-		}
-	public static void add(byte byte_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
 			byte_array[index]=byte_element;
-		}
-		else {
-			index++;
-			byte_array[index]=byte_element;
+			System.out.println("Element Inserted At:"+index);
 			}
-		
+		}
 	}
 	public static void add(short short_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			short_array[index]=short_element;
+		
+		if(index==sizee-1) {
+			System.out.println("Full");
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				short_array[index]=short_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			short_array[index]=short_element;
+			System.out.println("Element Inserted At:"+index);
 			}
+		}
 		
 	}
 	public static void add(int int_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			int_array[index]=int_element;
+		
+		if(index==sizee-1) {
+			System.out.println("Full");
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				int_array[index]=int_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			int_array[index]=int_element;
+			System.out.println("Element Inserted At:"+index);
 			}
-		
+		}
 	}
 	public static void add(long long_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			long_array[index]=long_element;
+		
+		if(index==sizee-1) {
+			System.out.println("Full");
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				long_array[index]=long_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			long_array[index]=long_element;
+			System.out.println("Element Inserted At:"+index);
 			}
-		
+		}
 	}
 	public static void add(float float_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			float_array[index]=float_element;
+		
+		if(index==sizee-1) {
+			System.out.println("Full");
+			
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				float_array[index]=float_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			float_array[index]=float_element;
+			System.out.println("Element Inserted At:"+index);
 			}
+		}
 		
 	}
 	public static void add(double double_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			double_array[index]=double_element;
+		
+		if(index==size-1) {
+			System.out.println("Full");
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				double_array[index]=double_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			double_array[index]=double_element;
+			System.out.println("Element Inserted At:"+index);
 			}
-		
+		}
 	}
 	public static void add(char char_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			char_array[index]=char_element;
+		
+		if(index==sizee-1) {
+			System.out.println("Full");
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				char_array[index]=char_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			char_array[index]=char_element;
+			System.out.println("Element Inserted At:"+index);
 			}
+		}
 		
 	}
 	public static void add(boolean boolean_element) {
-		if(index==-1) {
-			System.out.println("Inserting First Element:");
-			index=0;
-			boolean_array[index]=boolean_element;
+		
+		if(index==size-1) {
+			System.out.println("Full");
 		}
 		else {
+			if(index==-1) {
+				System.out.println("Inserting First Element:");
+				index=0;
+				boolean_array[index]=boolean_element;
+				System.out.println("Element Inserted At:"+index);
+			}
+			else {
 			index++;
 			boolean_array[index]=boolean_element;
+			System.out.println("Element Inserted At:"+index);
 			}
+		}
 		
 	}
-	/*public static void traverse() {
+	public static void traverse() {
 		if(choice==1) {
 			
 			for(Object object:object_array) {
@@ -239,35 +296,49 @@ public class ArrayDs {
 				}
 			}
 			if(type==2) {
-				short_element = scanner.nextShort();
-				//add method for short
+				for(short short_element : short_array) {
+					System.out.println(short_array[counter]);
+					counter++;
+				}
 			}
 			if(type==3) {
-				int_element = scanner.nextInt();
-				//add method for int
+				for(int int_element : int_array) {
+					System.out.println(int_array[counter]);
+					counter++;
+				}
 			}
 			if(type==4) {
-				long_element= scanner.nextLong();
-				//add method for long
+				for(long long_element : long_array) {
+					System.out.println(long_array[counter]);
+					counter++;
+				}
 			}
 			if(type==5) {
-				float_element=scanner.nextFloat();
-				//add method for float
+				for(float float_element : float_array) {
+					System.out.println(float_array[counter]);
+					counter++;
+				}
 			}
 			if(type==6) {
-				double_element = scanner.nextDouble();
-				//add method for double
+				for(double double_element : double_array) {
+					System.out.println(double_array[counter]);
+					counter++;
+				}
 			}
 			if(type==7) {
-				char_element = scanner.next().charAt(0);
-				//add method for char
+				for(char char_element : char_array) {
+					System.out.println(char_array[counter]);
+					counter++;
+				}
 			}
 			if(type==8) {
-				boolean_element = scanner.nextBoolean();
-				//add method for boolean
+				for(boolean boolean_element : boolean_array) {
+					System.out.println(boolean_array[counter]);
+					counter++;
+				}
 			}
 		}
-	}*/
+	}
 	public static void main(String[] args) {
 			choice();				
 			while(choice!=0) {
@@ -275,11 +346,10 @@ public class ArrayDs {
 			int choice=scanner.nextInt();
 			switch(choice) {
 			case 1 : getValue(); break;
-			//case 2 : traverse();break;
+			case 2 : traverse();break;
 			default : System.out.println("Wrong Choice");
 			}
-	//		check();
-//			traverse();
+
 			 
 		
 	}}
