@@ -356,7 +356,9 @@ public class ArrayDs {
 	public static void main(String[] args) {
 			choice();				
 			while(choice!=0) {
-				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse"+"\n"+"3. DeleteEnd");
+				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse"+"\n"+"3. DeleteEnd"+"\n"+"4. DeleteFromIndex");
+	
+				
 			int choice=scanner.nextInt();
 			switch(choice) {
 			case 1 : getValue(); break;
