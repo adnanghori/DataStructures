@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class ArrayDs {
+	static Object object_element,delete_object_element;
 	static byte byte_element;
 	static short short_element;
-	static int size,sizee,int_element,choice,type,counter=0;
+	static int size,sizee,int_element,choice,type,index=-1,delete_index;
 	static long long_element;
 	static float float_element;
 	static double double_element;
@@ -18,8 +19,8 @@ public class ArrayDs {
 	static double[] double_array;
 	static char[] char_array;
 	static boolean[] boolean_array;
-	static int index=-1;
-	static Object object_element;
+	
+	
 	static Scanner scanner = new Scanner(System.in);
 	public static void choice() {
 		System.out.println("Which Type Of Values To Store: " +"\n"+ "1. Object " +"\n"+ "2. Primitive");
@@ -281,74 +282,90 @@ public class ArrayDs {
 		
 	}
 	public static void traverse() {
+		int counter=0;
+		int flag=0;
 		if(choice==1) {
+		for(counter=0;counter<=index;counter++) {
+			System.out.println(object_array[counter]+" At Index :"+flag);
+			flag++;
+		}
 			
-			for(Object object:object_array) {
-				System.out.println(object_array[counter]);
-				counter++;
-			}
 		}
 		if(choice==2) {
 			if(type==1) {
-				for(byte byte_element : byte_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(byte_array[counter]);
-					counter++;
 				}
 			}
 			if(type==2) {
-				for(short short_element : short_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(short_array[counter]);
-					counter++;
 				}
 			}
 			if(type==3) {
-				for(int int_element : int_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(int_array[counter]);
-					counter++;
 				}
 			}
 			if(type==4) {
-				for(long long_element : long_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(long_array[counter]);
-					counter++;
 				}
 			}
 			if(type==5) {
-				for(float float_element : float_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(float_array[counter]);
-					counter++;
 				}
 			}
 			if(type==6) {
-				for(double double_element : double_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(double_array[counter]);
-					counter++;
 				}
 			}
 			if(type==7) {
-				for(char char_element : char_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(char_array[counter]);
-					counter++;
 				}
 			}
 			if(type==8) {
-				for(boolean boolean_element : boolean_array) {
+				for(counter=0;counter<=index;counter++) {
 					System.out.println(boolean_array[counter]);
-					counter++;
 				}
 			}
 		}
 	}
+	public static void deleteElementEnd() {
+		if(index==-1) {
+			System.out.println("Empty, No Element To Delete.");
+		}
+		else {
+			index--;
+		}
+		System.out.println("last element deleted");
+	}
+	public static void deleteElementFromIndex(){
+		System.out.println("Enter Index:");
+		delete_index = scanner.nextInt();
+		while(delete_index!=index) {
+			object_array[delete_index]=object_array[delete_index+1];
+			delete_index++;
+		}
+		index=index-1;
+	}
+	
 	public static void main(String[] args) {
 			choice();				
 			while(choice!=0) {
-				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse");
+				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse"+"\n"+"3. DeleteEnd");
 			int choice=scanner.nextInt();
 			switch(choice) {
 			case 1 : getValue(); break;
 			case 2 : traverse();break;
+			case 3 : deleteElementEnd();break;
+			case 4 : deleteElementFromIndex();
 			default : System.out.println("Wrong Choice");
-			}
+			
+		}
 
 			 
 		
