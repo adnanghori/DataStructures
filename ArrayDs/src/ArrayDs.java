@@ -224,7 +224,7 @@ public class ArrayDs {
 	}
 	public static void add(double double_element) {
 		
-		if(index==size-1) {
+		if(index==sizee-1) {
 			System.out.println("Full");
 		}
 		else {
@@ -263,7 +263,7 @@ public class ArrayDs {
 	}
 	public static void add(boolean boolean_element) {
 		
-		if(index==size-1) {
+		if(index==sizee-1) {
 			System.out.println("Full");
 		}
 		else {
