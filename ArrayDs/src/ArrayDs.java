@@ -284,6 +284,9 @@ public class ArrayDs {
 	public static void traverse() {
 		int counter=0;
 		int flag=0;
+		if(index==-1) {
+			System.out.println("Empty");
+		}
 		if(choice==1) {
 		for(counter=0;counter<=index;counter++) {
 			System.out.println(object_array[counter]+" At Index :"+flag);
@@ -294,42 +297,50 @@ public class ArrayDs {
 		if(choice==2) {
 			if(type==1) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(byte_array[counter]);
+					System.out.println(byte_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==2) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(short_array[counter]);
+					System.out.println(short_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==3) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(int_array[counter]);
+					System.out.println(int_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==4) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(long_array[counter]);
+					System.out.println(long_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==5) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(float_array[counter]);
+					System.out.println(float_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==6) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(double_array[counter]);
+					System.out.println(double_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==7) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(char_array[counter]);
+					System.out.println(char_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 			if(type==8) {
 				for(counter=0;counter<=index;counter++) {
-					System.out.println(boolean_array[counter]);
+					System.out.println(boolean_array[counter]+" At Index :"+flag);
+					flag++;
 				}
 			}
 		}
@@ -355,7 +366,7 @@ public class ArrayDs {
 	
 	public static void main(String[] args) {
 			choice();				
-			while(choice!=0) {
+			do {
 				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse"+"\n"+"3. DeleteEnd"+"\n"+"4. DeleteFromIndex");
 	
 				
@@ -364,12 +375,14 @@ public class ArrayDs {
 			case 1 : getValue(); break;
 			case 2 : traverse();break;
 			case 3 : deleteElementEnd();break;
-			case 4 : deleteElementFromIndex();
+			case 4 : deleteElementFromIndex();break;
 			default : System.out.println("Wrong Choice");
 			
 		}
-
+			}while(choice!=0);
 			 
 		
-	}}
+			
+	
+			}
 }
