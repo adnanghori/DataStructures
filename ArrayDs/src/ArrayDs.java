@@ -4,7 +4,7 @@ public class ArrayDs {
 	static Object object_element,delete_object_element;
 	static byte byte_element;
 	static short short_element;
-	static int size,sizee,int_element,choice,type,index=-1,delete_index;
+	static int size,sizee,int_element,choice,type,index=-1,delete_index,main_choice;
 	static long long_element;
 	static float float_element;
 	static double double_element;
@@ -370,19 +370,17 @@ public class ArrayDs {
 				System.out.println("Operation To Perform:"+"\n"+"1. Add"+"\n"+"2. Traverse"+"\n"+"3. DeleteEnd"+"\n"+"4. DeleteFromIndex");
 	
 				
-			int choice=scanner.nextInt();
-			switch(choice) {
+			main_choice=scanner.nextInt();
+			switch(main_choice) {
 			case 1 : getValue(); break;
 			case 2 : traverse();break;
 			case 3 : deleteElementEnd();break;
 			case 4 : deleteElementFromIndex();break;
-			default : System.out.println("Wrong Choice");
+			
+			//default : System.out.println("Wrong Choice"); break;
 			
 		}
-			}while(choice!=0);
+			}while(main_choice!=0);
 			 
-		
-			
-	
 			}
 }
