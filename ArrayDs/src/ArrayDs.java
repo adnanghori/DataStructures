@@ -380,7 +380,7 @@ public class ArrayDs {
 			//default : System.out.println("Wrong Choice"); break;
 			
 		}
-			}while(main_choice!=0);
+			}while(main_choice!=5);
 			 
 			}
 }

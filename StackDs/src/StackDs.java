@@ -365,10 +365,10 @@ public class StackDs {
 			if(index==-1) {
 				System.out.println("Empty.!");
 			}
-			if(choice==1) {
+			if(choice==1&&index>-1) {
 				System.out.println("Top Element "+object_stack[index]);
 			}
-			if(choice==2) {
+			if(choice==2&&index>-1) {
 				if(type==1) {
 					System.out.println("Top Element "+byte_stack[index]);
 				}
