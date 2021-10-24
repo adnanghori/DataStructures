@@ -266,16 +266,200 @@ public class StackDs {
 			if(index==-1) {
 				System.out.println("Empty.!");
 			}
-			else {
-				System.out.println("Element At Index "+index+" Popped");
+			if(choice==1) {
+				if(index==0) {
+					System.out.println("Last Element "+object_stack[index]+" Popped");
+					index--;
+				}
+				else {
+				System.out.println("Element "+object_stack[index]+" Popped");
 				index--;
+				}
+			}
+			if(choice==2) {
+				if(type==1) {
+					if(index==0) {
+						System.out.println("Last Element "+byte_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+byte_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==2) {
+					if(index==0) {
+						System.out.println("Last Element "+short_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+short_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==3) {
+					if(index==0) {
+						System.out.println("Last Element "+int_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+int_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==4) {
+					if(index==0) {
+						System.out.println("Last Element "+byte_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+long_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==5) {
+					if(index==0) {
+						System.out.println("Last Element "+byte_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+float_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==6) {
+					if(index==0) {
+						System.out.println("Last Element "+byte_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+double_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==7) {
+					if(index==0) {
+						System.out.println("Last Element "+byte_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+char_stack[index]+" Popped");
+					index--;
+					}
+				}
+				if(type==8) {
+					if(index==0) {
+						System.out.println("Last Element "+byte_stack[index]+" Popped");
+						index--;
+					}
+					else {
+					System.out.println("Element "+boolean_stack[index]+" Popped");
+					index--;
+					}
+				}
+			}
 	}
 			
-		}
+		
 		public static void peek() {
+			if(index==-1) {
+				System.out.println("Empty.!");
+			}
+			if(choice==1) {
+				System.out.println("Top Element "+object_stack[index]);
+			}
+			if(choice==2) {
+				if(type==1) {
+					System.out.println("Top Element "+byte_stack[index]);
+				}
+				if(type==2) {
+					System.out.println("Top Element "+short_stack[index]);
+				}
+				if(type==3) {
+					System.out.println("Top Element "+int_stack[index]);
+				}
+				if(type==4) {
+					System.out.println("Top Element "+long_stack[index]);
+				}
+				if(type==5) {
+					System.out.println("Top Element "+float_stack[index]);
+				}
+				if(type==6) {
+					System.out.println("Top Element "+double_stack[index]);
+				}
+				if(type==7) {
+					System.out.println("Top Element "+char_stack[index]);
+				}
+				if(type==8) {
+					System.out.println("Top Element "+boolean_stack[index]);
+				}
+			}
 			
 		}
-		
+		public static void traverse() {
+			int counter=0;
+			int flag=0;
+			if(index==-1) {
+				System.out.println("Empty.!");
+			}
+			if(choice==1) {
+				for(counter=0;counter<=index;counter++) {
+					System.out.println("Element: "+object_stack[counter]+" At Index: "+flag);
+					flag++;
+				}
+			}
+			if(choice==2) {
+				if(type==1) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+byte_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+				if(type==2) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+short_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+				if(type==3) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+int_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+				if(type==4) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+long_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+				if(type==5) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+float_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				
+				}
+				if(type==6) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+double_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+				if(type==7) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+char_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+				if(type==8) {
+					for(counter=0;counter<=index;counter++) {
+						System.out.println("Element: "+boolean_stack[counter]+" At Index: "+flag);
+						flag++;
+					}
+				}
+			}
+		}
 		public static void main(String[] args) {
 		choice();
 
@@ -285,11 +469,11 @@ public class StackDs {
 			switch(main_choice) {
 			case 1 : getValue(); break;
 			case 2 : pop();break;
-	//		case 3 : deleteElementEnd();break;
-		//	case 4 : deleteElementFromIndex();break;
+			case 3 : peek();break;
+			case 4 : traverse();break;
 						
 		}
-		}while(main_choice!=0);
+		}while(main_choice!=5);
 
 	}
 }
