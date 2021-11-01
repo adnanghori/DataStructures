@@ -222,6 +222,7 @@ public class QueueDs {
 			boolean_queue[rear] = boolean_element;
 			System.out.println("Element Inserted At:"+rear);
 		}
+		
 	}
 	public static void main(String[] args) throws InterruptedException {
 		choice();
